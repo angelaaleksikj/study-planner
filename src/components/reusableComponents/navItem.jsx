@@ -6,20 +6,31 @@ export function NavItem({ label, to }) {
             to={ to }
             className={ ( {isActive} ) => 
             `
-            px-4
-            py-2
-            rounded-md
-            font-medium
-            transition-all 
-            duration-200 
-            hover:bg-[#415a77]
-            hover:text-[#e0e1dd]
-            ${isActive ? "bg-[#1b263b] text-[#e0e1dd]"
-              : "text-white"
+            relative
+            text-[16px]
+            font-semibold
+            whitespace-nowrap
+            transition-colors
+            duration-200
+
+            after:absolute
+            after:left-0
+            after:-bottom-1
+            after:h-[2px]
+            after:w-0
+            after:bg-[#0d1b2a]
+            after:transition-all
+            after:duration-300
+
+            hover:text-[#0d1b2a]
+            hover:after:w-full
+            ${
+                isActive
+                ? "text-[#0d1b2a]"
+                : "text-[#0d1b2a]/80"
             }
             `
-            } 
-        
+        } 
         >
             {label}
         </NavLink>
