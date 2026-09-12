@@ -1,4 +1,4 @@
-export function Button ({ label , onClick, className="" }) {
+export function Button ({ label , onClick, className="" ,icon = null}) {
     return(
         <button 
             onClick={ onClick }
@@ -23,6 +23,7 @@ export function Button ({ label , onClick, className="" }) {
 
         >
             {label}
+            {icon}
         </button>
     );
 }
