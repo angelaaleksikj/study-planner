@@ -1,6 +1,7 @@
 import { Hero } from "../components/hero";
 import { NavBar } from "../components/navbar"
 import { Features } from "../components/features";
+import { AppShowCase } from "../components/appShowCase";
 
 export function HomePage() {
     return(
@@ -8,6 +9,7 @@ export function HomePage() {
            <NavBar /> 
            <Hero />
            <Features />
+           <AppShowCase />
         </main>
     );
 }
