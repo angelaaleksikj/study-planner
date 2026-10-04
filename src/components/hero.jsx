@@ -13,7 +13,7 @@ import {
 export function Hero() {
     return (
         <section
-            className="relative min-h-screen bg-cover bg-center"
+            className="relative min-h-screen overflow-x-hidden bg-cover bg-center"
             style={{
                 backgroundImage: `url(${heroImage})`,
             }}
@@ -21,9 +21,18 @@ export function Hero() {
 
             <div className="
                 absolute
-                left-10
-                top-28
-                max-w-[580px]
+                top-24
+                left-4
+                right-4
+
+                sm:left-6
+                sm:right-6
+
+                md:left-10
+                md:right-auto
+                md:top-28
+                md:max-w-[580px]
+
                 bg-white/75
                 backdrop-blur-lg
                 border
@@ -49,7 +58,9 @@ export function Hero() {
                 <h1
                     className="
                         font-poppins
-                        text-5xl
+                        text-3xl
+                        sm:text-4xl
+                        lg:text-5xl
                         font-bold
                         leading-[1.15]
                         text-[#0d1b2a]
@@ -61,9 +72,12 @@ export function Hero() {
                 </h1>
 
                 <p className="
-                    mt-5
+                    mt-4
+                    sm:mt-5
                     font-poppins
-                    text-xl
+                    text-base
+                    sm:text-lg
+                    lg:text-xl
                     leading-relaxed
                     text-[#415a77]
                 ">
@@ -75,10 +89,14 @@ export function Hero() {
                     label="Ace Your Classes"
                     onClick={() => console.log("ace that mf")}
                     className="
-                        mt-7
-                        text-lg
-                        !px-7
-                        !py-3
+                        mt-6
+                        sm:mt-7
+                        text-base
+                        sm:text-lg
+                        !px-5
+                        sm:!px-7
+                        !py-2.5
+                        sm:!py-3
                         !font-semibold
                         ring-2
                         ring-[#0d1b2a]/20
@@ -89,14 +107,16 @@ export function Hero() {
                         items-center
                         justify-center
                         gap-2
-                        "
+                    "
                     icon={<ArrowRight size={20} />}
                 />
 
                 <div className="
-                    mt-8
+                    mt-7
+                    sm:mt-8
                     grid
-                    grid-cols-4
+                    grid-cols-2
+                    sm:grid-cols-4
                     gap-5
                 ">
                     <div className="flex flex-col items-center text-center gap-2">
@@ -203,26 +223,7 @@ export function Hero() {
                         className="text-[#0d1b2a]/80"
                     />
                 </div>
-
-                <div
-                    className="
-                        mt-4
-                        max-w-[260px]
-                        rounded-2xl
-                        border
-                        border-white/30
-                        bg-white/20
-                        backdrop-blur-md
-                        px-6
-                        py-4
-                        shadow-lg
-                    "
-                >
-                    <p className="font-poppins text-lg font-medium text-[#0d1b2a]">
-                        A more focused way to study.
-                    </p>
             </div>
-</div>
         </section>
     );
 }
